@@ -60,4 +60,4 @@ span.status.false { background: red; color: red; }
   background-color: #AA0000; color: #FFFFFF; }
 #errorExplanation p { color: #333333; margin: 0; padding: 3px 0.5em; }
 #errorExplanation ul { margin-top: 0; }
-#errorExplanation ul li { list-style: square; }
+#errorExplanation ul li { list-style: square; }	
