@@ -15,6 +15,7 @@ def show
 end
 def new
 	@subject=Subject.new
+	@subject_count=Subject.count + 1
 end
 def create
 	# Instantiate a new object using form parameters
@@ -26,12 +27,14 @@ def create
 	redirect_to(:action => 'list')
 else
 	# If save fails,redisplay the form so user can fix problems
+	@subject_count=Subject.count + 1
 render('new')
 end
 end
 
 def edit
-	@subject=Subject.find(params[:id])	
+	@subject=Subject.find(params[:id])
+	@subject_count=Subject.count	
 end
 def update
 		# Find object using form parameters
@@ -43,6 +46,7 @@ def update
 	redirect_to(:action => 'show', :id => @subject.id)
 else
 	# If save fails,redisplay the form so user can fix problems
+	@subject_count=Subject.count + 1
 render('edit')
 end
 end
